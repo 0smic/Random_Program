@@ -27,7 +27,9 @@ Let's call like this array[x][y]. The x represent the position and y present the
 if you draw a number line of whole number the number y always in the y position
 
 4 will in the 4th position, 10 in the 10th position so y in yth position.
+
 x = y (if y is a number in the list)
+
 if y is not a number in the list we would assign it with a special character.
 
 
