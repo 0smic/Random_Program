@@ -18,13 +18,14 @@
 I try to built my own sorting algorithm Without using any idea or concept of sorting algorithm which already exists.
 Here is how,
 
-magine you get a list of number like this [23,2,43,12,9,1,4,54,65,23] 
+Imagine you get a list of number like this [23,2,43,12,9,1,4,54,65,23] 
 
 well my algorthim convert this list into a 2 dimension array Which i like look this ( array[65][1] ) kinda format.
 
 Let's call like this array[x][y]. The x represent the position and y present the number which in the list.
 
-if you draw a number line of whole number the number y always in the y position 
+if you draw a number line of whole number the number y always in the y position
+
 4 will in the 4th position, 10 in the 10th position so y in yth position.
 x = y (if y is a number in the list)
 if y is not a number in the list we would assign it with a special character.
