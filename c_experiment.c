@@ -1,5 +1,6 @@
 #include <stdio.h>
 #define AUTHOR "GOKUL B"
+void test(char[], int); /*It is a prototype of the function to check the we didn't miss any parameters when compiling */
 int main(){
     /*This is how we can create and access 2d array*/
     int two_d_array[3][2] = {{2,3},{4,6},{7,5}};
@@ -84,6 +85,16 @@ int main(){
         printf("%s", line);
     }*/
     
-    
+    char test_name[] = "Gokul B";
+    int age = 18;
+    test(test_name, age); /*I created a prototype(in the top of the code) of this function to make sure It fill the require parameters to avoid crashing the porgram*/
     return 0;
 }
+
+void test(char name[], int age){
+    printf("my name is %s\nn", name);
+    printf("I am %d", age);
+    
+    
+}
+
