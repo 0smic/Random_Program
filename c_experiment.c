@@ -48,5 +48,18 @@ int main(){
     int * pId = &id;
     printf("memory address of GPA: %p \n", pGpa);
     printf("memory address of Id: %p", &pId);
+
+     /*Dereferencing the pointer
+    Basically mean we are going to grab the data which is stored in memory address*/
+    int age = 18;
+    int * pAge = &age; /*Created a pointer which store memory address of age*/
+    printf("%d\n", *pAge); /*It actually collect the data store the memory address*/
+    printf("%d\n", *&age); /*This also do the same thing without help of pointer var*/
+    /*With string*/
+    char unkown = 'G';
+    char * pUnkown = &unkown; /*Created a pointer which store memory address of age*/
+    printf("%c\n", *pUnkown); /*It actually collect the data store the memory address*/
+    printf("%c", *&unkown); /*This also do the same thing without help of pointer var*/
+    
     return 0;
 }
