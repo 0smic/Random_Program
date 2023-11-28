@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-/* There is a minor error in the code if we set MAX_ATTEMPT to any number the real max_attempt in the game will 1 more than you set. Idk how this happening */
 #define AUTHOR "GOKUL B"
 #define SECRET_NUMBER 5
 #define MAX_ATTEMPT 2
@@ -9,7 +8,7 @@ void game_func() {
     int num = SECRET_NUMBER;
     int max_attempt = MAX_ATTEMPT;
     int attempt = 0;
-    int guess;
+    int guess = 0;
     int difference;
     while (guess != num){
         printf("Enter the No.");
