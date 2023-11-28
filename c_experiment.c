@@ -12,9 +12,9 @@ int main(){
         printf("\n");
     }
 
-    /* Achieving samw result with for loop and while loop*/
+    /* Achieving same result with for loop and while loop*/
     int num[] = {3,23,53,32,54,453,44,23};
-    /* First finding how many index value does it have meaning lenght */
+    /* First finding how many index value does it have meaning length */
     int length = sizeof(num) / sizeof(num[0]);
     printf("last index no. %d \n", length - 1);
     /*Now use the while loop and for loop to access the every data in the num*/
@@ -36,8 +36,8 @@ int main(){
     char sample = 'A';
     double gpa = 2.4;
     int id = 23232;
-    /*We have another type of data pointer, pointer itself is a memory address 
-    we can  find the memory address of amy data using &var_name 
+    /*We have another type of data ype pointer, pointer itself is a memory address 
+    we can  find the memory address of any data using &var_name 
     basically pointer is a type of data that are able to store memory address
     we can create a pointer var like this below(remember naming the varible must contain p first)*/
     char * pName = &sample;
@@ -53,7 +53,7 @@ int main(){
     Basically mean we are going to grab the data which is stored in memory address*/
     int age = 18;
     int * pAge = &age; /*Created a pointer which store memory address of age*/
-    printf("%d\n", *pAge); /*It actually collect the data store the memory address*/
+    printf("%d\n", *pAge); /*It actually collect the data stored the memory address*/
     printf("%d\n", *&age); /*This also do the same thing without help of pointer var*/
     /*With string*/
     char unkown = 'G';
