@@ -60,6 +60,24 @@ int main(){
     char * pUnkown = &unkown; /*Created a pointer which store memory address of age*/
     printf("%c\n", *pUnkown); /*It actually collect the data store the memory address*/
     printf("%c", *&unkown); /*This also do the same thing without help of pointer var*/
+
+
+    /*Creating a file and write in it 
+    FILE is another data type which is able to store the memory address of the file to open write read the file*/
+    
+    FILE * fpointer = fopen("text.txt", "a"); /*You can use a , w, r a = append, w = write, r = read*/
+    fprintf(fpointer, "Hello how are you?") ;/*Bascially it is also a printing syntax but it will print the content inside the file */
+    fclose(fpointer); /*Always make sure you close the opened file in a memory address*/
+
+    /*reading line in the a file*/
+    char line[255];
+    FILE * fsecpointer = fopen("text.txt", "r"); /*As Mentioed earlier r is used ot read the file*/
+    fgets(line, 255, fsecpointer); /*What it does is read the first line of the file If you added more more fgets it will increment and read second line*/
+    printf("%s", line);
+    fgets(line,255,fsecpointer);
+    printf("%s", line);
+    fclose(fsecpointer); /*It reads the second line of file*/
+    
     
     return 0;
 }
