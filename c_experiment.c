@@ -74,9 +74,15 @@ int main(){
     FILE * fsecpointer = fopen("text.txt", "r"); /*As Mentioed earlier r is used ot read the file*/
     fgets(line, 255, fsecpointer); /*What it does is read the first line of the file If you added more more fgets it will increment and read second line*/
     printf("%s", line);
-    fgets(line,255,fsecpointer);
+    fgets(line,255,fsecpointer); /*It will print the second line of the file*/
     printf("%s", line);
     fclose(fsecpointer); /*It reads the second line of file*/
+    
+    /*fgets only print individual line so use this loop to print 5 line in the file
+        for(i=0; i<5; i++){
+        fgets(line,255,fsecpointer);
+        printf("%s", line);
+    }*/
     
     
     return 0;
