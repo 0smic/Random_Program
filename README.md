@@ -21,6 +21,7 @@ Here is how,
 magine you get a list of number like this [23,2,43,12,9,1,4,54,65,23] 
 
 well my algorthim convert this list into a 2 dimension array Which i like look this ( array[65][1] ) kinda format.
+
 Let's call like this array[x][y]. The x represent the position and y present the number which in the list.
 
 if you draw a number line of whole number the number y always in the y position 
@@ -37,10 +38,21 @@ Now we take all the value in the y position change to list.
 
 The list would look like this.
 ("*,1,2,"*,4,"*,6,"*,...................65}
+
 Now using some function remove the special character in the list. Then you would have the Sorted list in the ascending order.
+
 look like this.
 [1,2,4,9,12,23,23,43,54,65]
+
 You can use basic C syntax to make it descending order(reverse it)
+
+#### Important 
+
+This algorithm will take time when dealing with large data set
+It wouldn't give accurate result if it have negative numbers
+
+
+
         
 
 
