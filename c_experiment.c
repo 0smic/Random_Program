@@ -31,7 +31,7 @@ int main(){
   
     /*Access the Memory Location*/
     char name[] = "Gokul";
-    printf("Memory Location of the name var: %p", name);
+    printf("\nMemory Location of the name var: %p \n", name);
   
     char sample = 'A';
     double gpa = 2.4;
