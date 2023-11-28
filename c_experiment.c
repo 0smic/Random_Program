@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#define AUTHOR "GOKUL B"
 int main(){
     /*This is how we can create and access 2d array*/
     int two_d_array[3][2] = {{2,3},{4,6},{7,5}};
