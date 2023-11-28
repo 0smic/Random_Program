@@ -33,6 +33,20 @@ int main(){
     char name[] = "Gokul";
     printf("Memory Location of the name var: %p", name);
   
-  
+    char sample = 'A';
+    double gpa = 2.4;
+    int id = 23232;
+    /*We have another type of data pointer, pointer itself is a memory address 
+    we can  find the memory address of amy data using &var_name 
+    basically pointer is a type of data that are able to store memory address
+    we can create a pointer var like this below(remember naming the varible must contain p first)*/
+    char * pName = &sample;
+    printf("memory address of pNmae: %p \n", pName);
+    printf("memory address of sample: %p \n", &sample);
+    /*Look both are same*/
+    double * pGpa = &gpa;
+    int * pId = &id;
+    printf("memory address of GPA: %p \n", pGpa);
+    printf("memory address of Id: %p", &pId);
     return 0;
 }
