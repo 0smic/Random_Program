@@ -18,43 +18,32 @@
 I try to built my own sorting algorithm Without using any idea or concept of sorting algorithm which already exists.
 Here is how,
 
-Imagine you get a list of number like this [23,2,43,12,9,1,4,54,65,23] 
-
-well my algorthim convert this list into a 2 dimension array Which i like look this ( array[65][1] ) kinda format.
-
-Let's call like this array[x][y]. The x represent the position and y present the number which in the list.
-
-if you draw a number line of whole number the number y always in the y position
-
-4 will in the 4th position, 10 in the 10th position so y in yth position.
-
-x = y (if y is a number in the list)
-
-if y is not a number in the list we would assign it with a special character.
-
-![Alt Text](sort_algorithm.jpg)
-
-
-after we convert to 2 dimensional array it would look like this.
-
-{0,"*},{1,1},{2,2},{3,"*},{4,4},{5,"*},{6,"*}.............{65,65}
-
-Now we take all the value in the y position change to list.
-
-The list would look like this.
-("*,1,2,"*,4,"*,6,"*,...................65}
-
-Now using some function remove the special character in the list. Then you would have the Sorted list in the ascending order.
-
-look like this.
-[1,2,4,9,12,23,23,43,54,65]
-
-You can use basic C syntax to make it descending order(reverse it)
+Imagine You have a list of number 
 
 #### Important 
 
 This algorithm will take time when dealing with large data set
-It wouldn't give accurate result if it have negative numbers
+It wouldn't give accurate result if it have negative numbers [23,2,43,12,9,1,4,54,65,23] like this to sort.
+
+Basically My algorithm convert this list into a 2 Dimensional array. Which is similar to this format ( array[80][1] ).
+
+Generally consider like this array[x][y] , and consider number in the list as 'z'.
+
+Now imagine we plot the numbers in the list in a number line. Then 4 will be in 4th position, 65 in the 65th position. so z will be in the zth posistion.
+
+array[4][0] = 4 , array[65][0] = 65 , so generally array[z][0] = z
+
+In the list [23,2,43,12,9,1,4,54,65,23] you can see z not belongs to all +ve whole number.
+
+But we created a 2D array with with a define finite range which belongs 0 to 80.
+
+So there are unfilled positions in the 2D array so we a special character to fill that space so the array will look lik this
+
+{0,"*},{1,1},{2,2},{3,"*},{4,4},{5,"*},{6,"*}.............{80,"*}
+
+
+
+
 
 
 
