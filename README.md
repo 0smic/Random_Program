@@ -32,7 +32,7 @@ In the list [23,2,43,12,9,1,4,54,65,23] you can see z not belongs to all +ve who
 
 But we created a 2D array with with a define finite range which belongs 0 to 80.
 
-So there are unfilled positions in the 2D array so we use a special character to fill that space so the array will look lik this
+So there are unfilled positions in the 2D array so we use a special character to fill that space so the array will look like this
 
 {0,"*},{1,1},{2,2},{3,"*},{4,4},{5,"*},{6,"*}.............{80,"*}
 
