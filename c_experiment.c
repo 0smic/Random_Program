@@ -135,6 +135,50 @@ int main(){
     int number2 = rand() % 6; // Now this will choose a number b/w 0 - 6
     printf("The first random number b/w (0 - 32,767)  : %d \n", number1);
     printf("The second random number b/w (0 -6)       : %d", number2);
+
+
+    // Bitwise Operator = Special operators used in bit level programming
+    //                        (you want to know about binary to understand this)
+    // &    - AND
+    // |   - OR
+    // ^    - XOP(exclusive OR)
+    // <<   - lift shift
+    // >>   - Right shift
+
+    // Also representing the binary of the number
+    int x = 6; //   6 = 00000110
+    int y = 12; // 12 = 00001100
+    int z;
+
+    // & operator compare this two to binary and if both have one one in the same position
+    // It will assign the resultant 'z' binary will be one in the that position
+    z = x & y; // so z = 00000100 ( This binary value is = 4)
+    printf("x & y =  %d\n", z);
+
+    // | operator also compare this two binary, If the any of the position in the binary have one.
+    // It will assign the one in the that position in the resultant 'z'
+    z = x | y; // so z = 00001110 (This binary value is = 14 )
+    printf("x | y =  %d\n", z);
+
+    // ^ operator compare this two binary, if any of the position contain only one the second binary contain 0 in the position.
+    // It will assign the one in that position  in the resultant 'z'
+    z = x ^ y; // so z = 00001010( This binary value is = 10)
+    printf("x ^ y =  %d\n", z); 
+
+    // << This operator will shift the 0 or 1 in the left to the right side
+    z = x << 1; // z = 00001100 (This binary wil be equal = 12)
+    printf("x << 1 =  %d\n", z); 
+    z = x << 2; // z = 00011000 (This binary wil be equal = 24)
+    printf("x << 2 =  %d\n", z); 
+    // Notice that how much be shift the value will be doubled
+
+
+    // >> This operator will shift the 0 or 1 in the right to the left side
+    z = x >> 1; // z = 00110000 (This binary wil be equal = 3)
+    printf("x >> 1 =  %d\n", z); 
+    z = x >> 2; // z = 01100000 (This binary wil be equal = 1)
+    printf("x >> 2 =  %d\n", z); 
+    // Notice that how much be shift the value will be half
     
     return 0;
 }
