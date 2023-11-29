@@ -50,7 +50,7 @@ If you want this in the descending order you can reverse it you basic functions.
 
  
 
-###Important 
+### Important 
 
 - This algorithm will take time when dealing with large data set
 - It wouldn't give accurate result if it have negative numbers
