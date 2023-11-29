@@ -86,7 +86,6 @@ int main(){
     }*/
     
     char test_name[] = "Gokul B";
-    int age = 18;
     test(test_name, age); /*I created a prototype(in the top of the code) of this function to make sure It fill the require parameters to avoid crashing the porgram*/
 
 
@@ -119,9 +118,8 @@ int main(){
 }
 
 void test(char name[], int age){
-    printf("my name is %s\nn", name);
+    printf("my name is %s\n", name);
     printf("I am %d", age);
     
     
 }
-
