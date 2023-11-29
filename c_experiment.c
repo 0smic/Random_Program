@@ -101,10 +101,7 @@ int main(){
         };
 
         struct User user1 = {"Gokul B", 18, 32.2};
-
     */
-
-
     // With using the typedef in struct
     typedef struct
     {
@@ -114,6 +111,20 @@ int main(){
     }User;
 
     User user1 = {"Gokul", 32, 23234.23}; //You don't want to type struct again and again
+    
+
+    enum Day{Sun = 1, Mon = 2, Tue = 3, Wed = 4, Thu = 5, Fri = 6, Sat = 7};
+    /*Enum - a user defined type of named integer identifier
+                Basically it help the code's readability*/
+    /*Let's create a program what say if it a weekend or not*/
+    int today = 4;
+    if(today==Sun || today==Sat){ // Notice that if we didn't set the enum it will today==1 || today==7 It will more diffcuilt to understand the code other than you.
+        printf("\nyeah it's a Weekend, Enjoy");
+
+    }else{
+        printf("\nProbabily you need to go to work :(");
+    }
+    
     return 0;
 }
 
