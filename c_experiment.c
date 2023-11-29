@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #define AUTHOR "GOKUL B"
 void test(char[], int); /*It is a prototype of the function to check the we didn't miss any parameters when compiling */
 int main(){
@@ -124,6 +126,15 @@ int main(){
     }else{
         printf("\nProbabily you need to go to work :(");
     }
+
+
+
+     //  How get a random no.
+    srand(time(0)); // This is what we called seed Without this it will not work
+    int number1 = rand(); // This will choose a no. b/w 0 - 32,767 The is the default of rand()
+    int number2 = rand() % 6; // Now this will choose a number b/w 0 - 6
+    printf("The first random number b/w (0 - 32,767)  : %d \n", number1);
+    printf("The second random number b/w (0 -6)       : %d", number2);
     
     return 0;
 }
