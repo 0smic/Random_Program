@@ -88,6 +88,33 @@ int main(){
     char test_name[] = "Gokul B";
     int age = 18;
     test(test_name, age); /*I created a prototype(in the top of the code) of this function to make sure It fill the require parameters to avoid crashing the porgram*/
+
+
+    
+
+    /* Without using the typedef this is how struct looks
+
+    struct User
+    {
+        char name[12];
+        int age;
+        double gpa;
+        };
+
+        struct User user1 = {"Gokul B", 18, 32.2};
+
+    */
+
+
+    // With using the typedef in struct
+    typedef struct
+    {
+        char name[12];
+        int age;
+        double gpa;
+    }User;
+
+    User user1 = {"Gokul", 32, 23234.23}; //You don't want to type struct again and again
     return 0;
 }
 
