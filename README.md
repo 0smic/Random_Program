@@ -11,7 +11,7 @@
  
     I also Added more comments in it so you can understand more better(So check out)
 
-- Sorting Algorithm  - It basically sorts the numbers in the array to ascending or descending order
+- **Sorting Algorithm**  - It basically sorts the numbers in the array to ascending or descending order
 
 ## Explanation How Sorting Algorithm Work
 
