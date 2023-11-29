@@ -32,7 +32,7 @@ x = y (if y is a number in the list)
 
 if y is not a number in the list we would assign it with a special character.
 
-![Project Image](sort_algorithm.jpg)
+![Alt Text](sort_algorithm.jpg)
 
 
 after we convert to 2 dimensional array it would look like this.
