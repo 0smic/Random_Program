@@ -3,8 +3,6 @@
 #include <time.h>
 #include <stdlib.h>
 
-const char ATUHOR[] = "Gokul B";
-
 enum process{success = 0, failed = 1};
 const char COMPUTER = 'O';
 const char PLAYER = 'X';
@@ -17,7 +15,7 @@ void update_board(int,int,char); // This function will update the data into the 
 void main_loop(); // This will loop the take input print board computer algorthim etc
 int free_space();   // This will calculate how much free spaces are left the game
 void check_winner(); // This function will check if there is any winner after the user or the computer make a move.
-void first_computer_move(); //This function will decide the first move the computer
+void first_computer_move(); //This function will decide the first move the computer, also avoid the first move computer to over written in the assigned character
 
 
 
@@ -40,7 +38,7 @@ void reset_board(){
 }
 
 void print_board(){
-    printf("   |     |    \n");
+    printf("\n   |     |    \n");
     printf(" %c |  %c  | %c\n", board[0][0], board[0][1], board[0][2]);
     printf("---|-----|----\n");
     printf(" %c |  %c  | %c\n", board[1][0], board[1][1], board[1][2]);
@@ -101,26 +99,48 @@ int free_space(){
 void first_computer_move(){
     srand(time(0));
     int random_x_cordinate;
-    int random_y_cordinate ;
-    random_x_cordinate = rand()% 2; //Random no. b/w 0 to 2 
-    if (random_x_cordinate==1){ // We don't want 1 to be the x cordinate it will lead to losing game
-        random_x_cordinate++; // It will make the 1 to 2
-        random_y_cordinate = rand() % 2; //Random no.b/w 1 to 2 for y cordinate
-        if (random_y_cordinate==1){ // We don't want y be also 1
-            random_y_cordinate++; // it make 1 to 0 if y = 1 
-            update_board(random_x_cordinate,random_y_cordinate,COMPUTER); // y == 1, x == 1
-            
-        }else{
-            update_board(random_x_cordinate,random_y_cordinate,COMPUTER); // y !=1, x==1 
+    int random_y_cordinate;
+    int temp_int = 20; // It is a temp integer which is used to loop to avoid over writtening the assigned character.
+    for (int i=0;i<temp_int;i++){
+        random_x_cordinate = rand()% 2; //Random no. b/w 0 to 2 
+        if (random_x_cordinate==1){ // We don't want 1 to be the x cordinate it will lead to losing game
+            random_x_cordinate++; // It will make the 1 to 2
+            random_y_cordinate = rand() % 2; //Random no.b/w 1 to 2 for y cordinate
+            if (random_y_cordinate==1){ // We don't want y be also 1
+                random_y_cordinate++; // it make 1 to 0 if y = 1 
+                if(board[random_x_cordinate][random_y_cordinate] == ' '){
+                    update_board(random_x_cordinate,random_y_cordinate,COMPUTER); // y == 1, x == 1
+                    break;
+                }else{
+                    continue;
+                }   
+            }else{ 
+                if(board[random_x_cordinate][random_y_cordinate] == ' '){
+                    update_board(random_x_cordinate,random_y_cordinate,COMPUTER); //// y !=1, x==1
+                    break;
+                }else{
+                    continue;
+                }
+            }
+        }else{ // x !=1
+            random_y_cordinate = rand() % 2; // Random no b/w 0 to 2 
+            if (random_y_cordinate==1){ // checking if y==1 
+                random_y_cordinate++;
+                if(board[random_x_cordinate][random_y_cordinate] == ' '){
+                    update_board(random_x_cordinate,random_y_cordinate,COMPUTER); 
+                    break;
+                }else{
+                    continue;
+                }
+            }else{ // x != 1, y != 1
+                if(board[random_x_cordinate][random_y_cordinate] == ' '){
+                    update_board(random_x_cordinate,random_y_cordinate,COMPUTER); //// y !=1, x==1
+                    break;
+                }else{
+                    continue;
+                }
         }
-    }else{ // x !=1
-        random_y_cordinate = rand() % 2; // Random no b/w 0 to 2 
-        if (random_y_cordinate==1){ // checking if y==1 
-            random_y_cordinate++;
-            update_board(random_x_cordinate,random_y_cordinate,COMPUTER);
-        }else{ // x != 1, y != 1
-            update_board(random_x_cordinate,random_y_cordinate,COMPUTER);
-    }
+        }
     }
 }
 
@@ -142,13 +162,13 @@ void computer_algorithm(){
             }
         }
     }
-
     for (int k=0;k<10;k++){
         if (temp_array[k] != 0){
             array[temp_int] = temp_array[k];
             temp_int ++;
         }
-    }  
+    }
+   
     if (array[1] == 0){
         first_computer_move();
     }
