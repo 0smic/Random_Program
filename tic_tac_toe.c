@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 enum process{success = 0, failed = 1};
+enum board_features{row_one = 0, row_two = 1, row_three = 2, column_one = 0, column_two = 1, column_three = 2};
 const char COMPUTER = 'O';
 const char PLAYER = 'X';
 char board[3][3]; 
@@ -73,6 +74,7 @@ void main_loop(){
         if(result==success){
             free_spaces--;  // It will decrease the value of the free space whenever user or computer make a valid move.
             computer_algorithm();
+            check_winner();
         }
     }
 }
@@ -162,16 +164,41 @@ void computer_algorithm(){
             }
         }
     }
+
     for (int k=0;k<10;k++){
         if (temp_array[k] != 0){
             array[temp_int] = temp_array[k];
             temp_int ++;
         }
     }
-   
+
+       
     if (array[1] == 0){
         first_computer_move();
     }
 }
 
-
+void check_winner(){
+    for (int column=0;column<3;column++){
+        if (board[row_one][column]== board[row_two][column] && board[row_one][column]== board[row_three][column]){
+            if (board[row_one][column]==PLAYER){
+                printf("OHH YOU WIN THE GAME\n");
+                printf("HOW IS IT POSSIBLE !");
+            }else if (board[row_one][column]==COMPUTER){
+                printf("I TOLD YOU IN THE BEIGNING\n");
+                printf("I AM THE BEST ALL TIME... go and sleep");
+            }
+        }
+    }
+    for (int row=0;row<3;row++){
+        if (board[row][column_one]== board[row][column_two] && board[row][column_one]== board[row][column_three]){
+            if (board[row][column_one]==PLAYER){
+                printf("OHH YOU WIN THE GAME\n");
+                printf("HOW IS IT POSSIBLE !");
+            }else if (board[row][column_one]==COMPUTER){
+                printf("I TOLD YOU IN THE BEIGNING\n");
+                printf("I AM THE BEST ALL TIME... go and sleep");
+            }
+        }
+    }
+}
