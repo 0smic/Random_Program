@@ -179,7 +179,7 @@ void computer_algorithm(){
 }
 
 void check_winner(){
-    for (int column=0;column<3;column++){
+    for (int column=0;column<3;column++){ // This will check if there is a winner in the row section
         if (board[row_one][column]== board[row_two][column] && board[row_one][column]== board[row_three][column]){
             if (board[row_one][column]==PLAYER){
                 printf("OHH YOU WIN THE GAME\n");
@@ -190,7 +190,7 @@ void check_winner(){
             }
         }
     }
-    for (int row=0;row<3;row++){
+    for (int row=0;row<3;row++){ // This will check if there is a winner in the row section
         if (board[row][column_one]== board[row][column_two] && board[row][column_one]== board[row][column_three]){
             if (board[row][column_one]==PLAYER){
                 printf("OHH YOU WIN THE GAME\n");
@@ -201,4 +201,22 @@ void check_winner(){
             }
         }
     }
+    if(board[0][0]==board[1][1] && board[0][0] == board[2][2]){
+            if (board[1][1]==PLAYER){
+                printf("OHH YOU WIN THE GAME\n");
+                printf("HOW IS IT POSSIBLE !");
+            }else if (board[1][1]==COMPUTER){
+                printf("I TOLD YOU IN THE BEIGNING\n");
+                printf("I AM THE BEST ALL TIME... go and sleep");
+            }
+    }else if(board[0][2]==board[1][1] && board[2][0] == board[1][1]){
+            if (board[1][1]==PLAYER){
+                printf("OHH YOU WIN THE GAME\n");
+                printf("HOW IS IT POSSIBLE !");
+            }else if (board[1][1]==COMPUTER){
+                printf("I TOLD YOU IN THE BEIGNING\n");
+                printf("I AM THE BEST ALL TIME... go and sleep");
+            }
+    }
+    
 }
