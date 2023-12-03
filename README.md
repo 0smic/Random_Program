@@ -34,17 +34,17 @@ But we created a 2D array with with a define finite range which belongs 0 to 80.
 
 So there are unfilled positions in the 2D array so we use a special character to fill that space so the array will look like this
 
-{0,"*},{1,1},{2,2},{3,"*},{4,4},{5,"*},{6,"*}.............{80,"*}
+{0,&},{1,1},{2,2},{3,&},{4,4},{5,&},{6,&}.............{80,&}
 
 Then we loop into the array and extract the value and make it into a list. It would be look like this
 
-{"*,1,2,"*,4,"*,6,"*,...................,"*}
+{&,1,2,&,4,&,6,&,...................,&}
 
 Then we remove all the special character in the list, After that you will get the sorted list of the list.
 
 [1,2,4,9,12,23,23,43,54,65]
 
-If you want this in the descending order you can reverse it you basic functions.
+If you want this in the descending order you can reverse it using basic functions.
 
 ### Important 
 
