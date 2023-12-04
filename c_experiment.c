@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #define AUTHOR "GOKUL B"
-void test(char[], int); /*It is a prototype of the function to check the we didn't miss any parameters when compiling */
+void test(char[], int); /*It is a prototype of the function to check that we didn't miss any parameters when compiling to avoid potential security issues*/
 int main(){
     /*This is how we can create and access 2d array*/
     int two_d_array[3][2] = {{2,3},{4,6},{7,5}};
@@ -17,7 +17,7 @@ int main(){
 
     /* Achieving same result with for loop and while loop*/
     int num[] = {3,23,53,32,54,453,44,23};
-    /* First finding how many index value does it have meaning length */
+    /* First finding how many index value does it have, meaning length */
     int length = sizeof(num) / sizeof(num[0]);
     printf("last index no. %d \n", length - 1);
     /*Now use the while loop and for loop to access the every data in the num*/
@@ -34,17 +34,17 @@ int main(){
   
     /*Access the Memory Location*/
     char name[] = "Gokul";
-    printf("\nMemory Location of the name var: %p \n", name);
+    printf("\nMemory Location of the name var: %p \n", name);  // Memory address is the location were the value of name is stored physically in ram or something.
   
     char sample = 'A';
     double gpa = 2.4;
     int id = 23232;
-    /*We have another type of data ype pointer, pointer itself is a memory address 
+    /*We have another type of data type pointer, pointer itself is a memory address 
     we can  find the memory address of any data using &var_name 
     basically pointer is a type of data that are able to store memory address
-    we can create a pointer var like this below(remember naming the varible must contain p first)*/
-    char * pName = &sample;
-    printf("memory address of pNmae: %p \n", pName);
+    we can create a pointer var like this below(remember naming the varible must contain p first for better understanding)*/
+    char * pSample = &sample;
+    printf("memory address of pNmae: %p \n", pSample);
     printf("memory address of sample: %p \n", &sample);
     /*Look both are same*/
     double * pGpa = &gpa;
@@ -66,16 +66,16 @@ int main(){
 
 
     /*Creating a file and write in it 
-    FILE is another data type which is able to store the memory address of the file to open write read the file*/
+    FILE is another data type which is able to store the memory address of the file to open, write, read the file*/
     
-    FILE * fpointer = fopen("text.txt", "a"); /*You can use a , w, r a = append, w = write, r = read*/
+    FILE * fpointer = fopen("text.txt", "a"); /*You can use( a , w, r) a = append, w = write, r = read*/
     fprintf(fpointer, "Hello how are you?") ;/*Bascially it is also a printing syntax but it will print the content inside the file */
     fclose(fpointer); /*Always make sure you close the opened file in a memory address*/
 
-    /*reading line in the a file*/
+    /*reading line in the file*/
     char line[255];
     FILE * fsecpointer = fopen("text.txt", "r"); /*As Mentioed earlier r is used ot read the file*/
-    fgets(line, 255, fsecpointer); /*What it does is read the first line of the file If you added more more fgets it will increment and read second line*/
+    fgets(line, 255, fsecpointer); /*What it does is read the first line of the file If you add one more fgets it will increment and read second line*/
     printf("%s", line);
     fgets(line,255,fsecpointer); /*It will print the second line of the file*/
     printf("%s", line);
@@ -170,7 +170,7 @@ int main(){
     printf("x << 1 =  %d\n", z); 
     z = x << 2; // z = 00011000 (This binary wil be equal = 24)
     printf("x << 2 =  %d\n", z); 
-    // Notice that how much be shift the value will be doubled
+    // Notice that z is doubled when increase the value after <<
 
 
     // >> This operator will shift the 0 or 1 in the right to the left side
@@ -178,7 +178,7 @@ int main(){
     printf("x >> 1 =  %d\n", z); 
     z = x >> 2; // z = 01100000 (This binary wil be equal = 1)
     printf("x >> 2 =  %d\n", z); 
-    // Notice that how much be shift the value will be half
+    // Notice that z will half when when increase the value after >>
     
     return 0;
 }
