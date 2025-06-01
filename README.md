@@ -1,6 +1,7 @@
 # Random_Program
 
 - **Guess the Number** - Is a sample game which you need to guess the number which we stored as a variable, You only have 3 attempt. We will tell you, Are you close to the number or not 
+
 (future edit: f**king insane I actually wrote this)
 
 - **C Experiment**  - Is basically teach You 
@@ -13,6 +14,7 @@
     I also Added more comments in it so you can understand more better(So check out)
 
 - **Sorting Algorithm**  - It basically sorts the numbers in the array to ascending or descending order
+
 (future: Worst thing ever. it's O(n^n) lol. atleast I document this. f**king sick)
 
 ## Explanation How Sorting Algorithm Work
